@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "port": "13306",
+  "user": "root",
+  "password": "passwd00",
+  "database": "FAMILY_TREE"
+}

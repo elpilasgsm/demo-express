@@ -1,9 +1,9 @@
-mixin line(label)
+mixin line(label, url)
     li.nav-item
-        a.nav-link(href="javascript:void(0)") #{label}
+        a.nav-link(href="#{url}") #{label}
 
 nav.navbar.navbar-dark.bg-primary#testId
     ul.nav.mr-auto
-        +line('Add new person')
-        +line('Search persons')
-        +line('Check Family')
+        +line('Add new person','#')
+        +line('Search persons','/users')
+        +line('Check Family','#')

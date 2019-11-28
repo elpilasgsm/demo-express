@@ -1,12 +1,15 @@
 doctype html
 html
-  head
-    title= title
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins")
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    head
+        title= title
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
 
-    script(src='/js/jquery.min.js')
-    script(src='/js/bootstrap.min.js')
-  body
-    block content
+        script(src='/js/jquery.min.js')
+        script(src='/js/bootstrap.min.js')
+    body
+        div(class='container')
+            h1 #{title}
+            include ./menu
+            block content

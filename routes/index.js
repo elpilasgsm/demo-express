@@ -7,7 +7,6 @@ router.get('/', function (req, res, next) {
 });
 
 var dataObject = {
-    title: 'Tree',
     content: ''
 };
 

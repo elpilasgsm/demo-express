@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    each person in persons
+        div.row
+            div.col-md-4
+                p #{person.firstName}
+            div.col-md-4
+                p #{person.lastName}

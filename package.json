@@ -15,6 +15,7 @@
     "jade-bootstrap": "^1.0.14",
     "jquery": "^3.4.1",
     "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
     "nodebootstrap": "^4.4.1"
   }
 }

@@ -6,14 +6,11 @@ block content
             $('#content').text('new data');
             return false;
         }
-    div(class='container')
-        h1 #{title}
-        include ./menu
-        div(class='row')
-            div(class='col-md-4')
-                p Welcome to #{title}
-            div(class='col-md-8')
-                p(id = 'content') Welcome to #{content}
-        div(class='row')
-            div(class='col-md-12')
-                button(onclick='buttonAction()' class="btn btn-primary") Click
+    div.row
+        div.col-md-4
+            p Welcome to #{title}
+        div.col-md-8
+            p(id = 'content') Welcome to #{content}
+    div.row
+        div.col-md-12
+            button(onclick='buttonAction()' class="btn btn-primary") Click
