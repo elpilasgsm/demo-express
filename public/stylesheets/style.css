@@ -5,3 +5,7 @@ body {
 .nav-link {
     color: #efefef;
 }
+
+.btn-sm {
+    margin-right: 16px;
+}

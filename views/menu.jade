@@ -2,8 +2,7 @@ mixin line(label, url)
     li.nav-item
         a.nav-link(href="#{url}") #{label}
 
-nav.navbar.navbar-dark.bg-primary#testId
+nav.navbar.navbar-dark.bg-primary
     ul.nav.mr-auto
-        +line('Add new person','#')
-        +line('Search persons','/users')
-        +line('Check Family','#')
+        +line('Персоны','/users')
+        +line('Семья','#')

@@ -3,11 +3,13 @@ html
     head
         title= title
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins")
-        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/public/stylesheets/style.css')
         link(rel='stylesheet', href='/css/bootstrap.min.css')
 
+        script(src='/public/js/client-common.js')
         script(src='/js/jquery.min.js')
         script(src='/js/bootstrap.min.js')
+        script(src='/js/moment.js')
     body
         div(class='container')
             h1 #{title}

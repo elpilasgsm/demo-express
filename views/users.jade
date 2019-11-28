@@ -1,9 +1,48 @@
+mixin formControl(id, label)
+    div.form-group.row
+        label.col-sm-2.col-form-label(for="#{id}") #{label}
+        div.col-sm-10
+            input.form-control(id="#{id}" type='text')
+
+mixin datepicker(id, label)
+    div.form-group.row
+        label.col-sm-2.col-form-label(for="#{id}") #{label}
+        div.col-sm-10
+            input.datepicker(id="#{id}")
+
 extends layout
 
 block content
-    each person in persons
-        div.row
-            div.col-md-4
-                p #{person.firstName}
-            div.col-md-4
-                p #{person.lastName}
+    script(src='/public/js/client-users.js')
+    script(src='/js/bootstrap-datepicker.js')
+    link(rel='stylesheet', href='/css/bootstrap-datepicker.css')
+    table.table.table-striped.table-bordered
+        thead
+            tr
+                th(colspan=5)
+                    div.input-group.input-group-lg
+                        input.form-control#searchTerm
+                        div.input-group-append
+                            button.btn.btn-outline-secondary#search(onclick='search()') Поиск
+            tr
+                th Имя
+                th Фамилия
+                th Дата Рождения
+                th Дата Смерти
+                th Действия
+        tbody#users
+
+    div.modal(tabindex="-1" role="dialog")#editUserForm
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    h5.modal-title Персона
+                div.modal-body
+                    form
+                        +formControl("firstName","Имя")
+                        +formControl("lastName","Фамилия")
+                        +datepicker("birthData","Дата рождения")
+                        +datepicker("deathDate","Дата смерти")
+                div.modal-footer
+                    button.btn.btn-secondary(data-dismiss='modal')#editCloseBtn Закрыть
+                    button.btn.btn-primary(data-dismiss='modal')#editSaveBtn Сохранить
